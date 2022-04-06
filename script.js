@@ -1,1 +1,1 @@
-document.onload(alert("IT'S CHUNKLING TIME"));
+document.onload(printstuff("hi"));
