@@ -2,7 +2,7 @@ from cefpython3 import cefpython as cef
 import sys
 import os
 import backend.backend
-from gen import *
+from gui.gen import *
 
 
 cef.Initialize()
