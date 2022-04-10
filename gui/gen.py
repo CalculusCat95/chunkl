@@ -21,7 +21,7 @@ class Page:
         htmlfile = open(page + ".html","r")
         jsfile = open(page + ".js","r")
         cssfile = open(page + ".css","r")
-        self.html.format(#insert the code here)
+        self.html.format(script = jsfile.read())
         htmlfile.close()
         jsfile.close()
         cssfile.close()
