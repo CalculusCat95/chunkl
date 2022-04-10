@@ -1,0 +1,1 @@
+document.onload(function (){build(platform="windows", path=".\\projects\\project.json")});
