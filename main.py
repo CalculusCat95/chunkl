@@ -1,16 +1,17 @@
 from cefpython3 import cefpython as cef
-import sys
-import os
-import backend.backend
-from gui.gen import *
+import sys, os
+import frontend.bindings as bindings
+import gui.generator as generator
 
+cef.Initialize() ## Initialize cefpython
 
-cef.Initialize()
-browser = cef.CreateBrowserSync(url=cef.GetDataUrl(Page.generate(page="start")), window_title="chunkl")
-bindings = cef.JavascriptBindings()
+## Display start page
+window = cef.CreateBrowserSync(url=cef.GetDataUrl(generator.generate(page="start")), window_title="chunkl")
 
-bindings.SetFunction("build", backend.backend.build)
-browser.SetJavascriptBindings(bindings)
-cef.MessageLoop()
-del browser
+bindings.bind(browser=window) ## Bind python functions to javascript
+
+cef.MessageLoop() ## Initialize cefpython main loop
+
+## Clean up
+del window
 cef.Shutdown()
