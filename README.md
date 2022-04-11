@@ -4,7 +4,7 @@
 
 chunkl is a gui-based software development toolkit created by CalculusCat95 and C0LateralD4mage. The backend and file operations are implemented in Python and the gui is written in HTML/CSS/Javascript. The gui is built with the CEFPython3 library. This repository does not currently accept external pull requests, however this *may* change in the future (subject to the decision of the developers). We chose the name 'chunkl' (it's lowercase on purpose) because we couldn't think of anything better. 
 
-## Code Formatting
+## Code Formatting 
 
 ### Comments
 
@@ -12,7 +12,7 @@ Comments on a specific line of code are placed after the line. Comments on a gro
 
 ### Line Spacing
 
-A newline is inserted between every a group of similar lines. A group can contain only one line. It's ok if this spread the code out somewhat; it helps with readability. 
+A newline is inserted between every a group of similar lines. A group may contain only one line. It's ok if this spread the code out somewhat; it helps with readability. 
 
 ### Modularization
 
