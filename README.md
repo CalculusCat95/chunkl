@@ -2,7 +2,7 @@
 
 ## About
 
-chunkl is a GUI-based software development toolkit created by CalculusCat95 and C0LateralD4mage. The backend and file operations are implemented in Python and the GUI is written in HTML/CSS/Javascript. The GUI is built with the CEFPython3 library. This repository does not currently accept external pull requests, however this *may* change in the future (subject to the decision of the developers). We chose the name 'chunkl' (it's lowercase on purpose) because we couldn't think of anything better. 
+Chunkl is a GUI-based software development toolkit created by CalculusCat95 and C0LateralD4mage. The backend and file operations are implemented in Python and the GUI is written in HTML/CSS/Javascript. The GUI is built with the CEFPython3 library. This repository does not currently accept external pull requests, however this *may* change in the future (subject to the decision of the developers). We chose the name 'chunkl' (it's lowercase on purpose) because we couldn't think of anything better. 
 
 ## Code Formatting 
 
@@ -21,3 +21,7 @@ Code is seperated into modules based on function; code that does similar stuff i
 ### Indentation
 
 This seems to be a fairly controversial subject. In this project, indents are 4 spaces in Python, and Javascript. CSS and HTML are indented with 2 spaces. 
+
+## Building
+
+This project hasn't advanced to the point of being built yet, but in the future it will be available on all three major operating systems (Windows, Mac OS, Linux). We plan to build it with cx_freeze.
