@@ -2,3 +2,4 @@ blob_storage/
 webrtc_events_logs/
 debug.log
 __pycache__/
+*.pyc
