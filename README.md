@@ -18,6 +18,6 @@ A newline is inserted between every a group of similar lines. A group may contai
 
 Code is seperated into modules based on function; code that does similar stuff is grouped together. 
 
-## Indentation
+### Indentation
 
 This seems to be a fairly controversial subject. In this project, indents are 4 spaces in Python, and Javascript. CSS and HTML are indented with 2 spaces. 
