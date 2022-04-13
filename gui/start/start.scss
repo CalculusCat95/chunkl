@@ -9,7 +9,7 @@
 .getchunkling {
   text-align: center;
   background-color: rgb(255, 170, 0);
-  &&.btn {
+  &.btn {
     border-radius: 2.5px;
     padding: 1px;
   }
