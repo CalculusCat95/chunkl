@@ -1,12 +1,16 @@
 .body {
-    background-color: darkcyan;
+  background-color: darkcyan;
 };
 .chunkldiv {
-    text-align: center;
-    font-size: 500%;
-    color: green;
+  text-align: center;
+  font-size: 500%;
+  color: green;
 };
 .getchunkling {
-    text-align: center;
-    background-color: rgb(255, 170, 0);
+  text-align: center;
+  background-color: rgb(255, 170, 0);
+  &&.btn {
+    border-radius: 2.5px;
+    padding: 1px;
+  }
 }
