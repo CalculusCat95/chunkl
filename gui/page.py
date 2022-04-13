@@ -29,7 +29,7 @@ def generate (page):
 
 def page (page):
 
-    window.LoadUrl(generate(page)) ## Generates the correct page and displays it
+    window.LoadUrl(cef.GetDataUrl(generate(page))) ## Generates the correct page and displays it
 
 
 window = cef.CreateBrowserSync(url=cef.GetDataUrl(generate("start")), window_title="chunkl") ## Display start page
