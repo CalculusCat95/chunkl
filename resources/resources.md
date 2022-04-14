@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/11609376/share-data-between-html-pages - pass data between pages + save it
