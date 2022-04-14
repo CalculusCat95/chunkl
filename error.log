@@ -1,0 +1,47 @@
+
+[2022-04-14 14:53:08] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 21, in fileRead
+    cef.ExcecuteJavascript(jsCode="alert("+r+");")
+NameError: name 'cef' is not defined
+
+
+[2022-04-14 14:53:37] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    cef.ExcecuteJavascript(jsCode="alert("+r+");")
+AttributeError: module 'cefpython3.cefpython_py39' has no attribute 'ExcecuteJavascript'
+
+
+[2022-04-14 14:54:59] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    browser.ExcecuteJavascript(jsCode="alert("+r+");")
+NameError: name 'browser' is not defined
+
+
+[2022-04-14 14:56:25] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 8, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 7, in <module>
+    import frontend.bindings as bindings
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\bindings.py", line 4, in <module>
+    import frontend.fileio as fileio
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 5, in <module>
+    from ..gui.page import browser
+ImportError: attempted relative import beyond top-level package
+
+
+[2022-04-14 14:57:33] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    browser.ExcecuteJavascript(jsCode="alert("+r+");")
+NameError: name 'browser' is not defined
+
+
+[2022-04-14 14:58:19] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    browser.ExcecuteJavascript(jsCode="alert("+r+");")
+NameError: name 'browser' is not defined
+

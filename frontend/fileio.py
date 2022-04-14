@@ -1,6 +1,17 @@
 """This file contains the functions fileRead and fileWrite. They are exposed to javascript."""
+import tkinter as tk
+from tkinter import filedialog
+from cefpython3 import cefpython as cef
+
 ##Function to read files
-def fileRead(path):
+def fileRead():
+
+    root = tk.Tk()
+    root.withdraw()
+
+    path = filedialog.askopenfilename()
+
+    print(path)
 
     f = open(path, "r")
 
@@ -8,7 +19,7 @@ def fileRead(path):
 
     f.close()
     
-    return r
+    browser.ExcecuteJavascript(jsCode="alert("+r+");")
 
 ##Function to write values to files
 def fileWrite(path, content):
@@ -18,3 +29,8 @@ def fileWrite(path, content):
     f.write(str(content))
 
     f.close()
+
+## For debug purposes 
+def printToPython(str):
+
+    print(str)

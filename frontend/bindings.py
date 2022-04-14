@@ -5,12 +5,13 @@ import frontend.fileio as fileio
 
 def bind(browser):
     
-    bindings = cef.JavascriptBindings() ## Initializes cefpython JavascriptBindings class
+    bindings = cef.JavascriptBindings(bindToFrames=True) ## Initializes cefpython JavascriptBindings class
 
     ## Binds functions to javascript
     bindings.SetFunction("build", backend.build)
     bindings.SetFunction("fileRead", fileio.fileRead)
     bindings.SetFunction("fileWrite", fileio.fileWrite)
     bindings.SetFunction("page", page.page)
+    bindings.SetFunction("print", fileio.printToPython)
 
     browser.SetJavascriptBindings(bindings) ## Passes bindings to cefpython
