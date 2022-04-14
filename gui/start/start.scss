@@ -11,6 +11,8 @@ body {
   font-size: 500%;
   border-radius: 10px;
   color: $text;
+  -webkit-text-stroke-color: $accent-one;
+  -webkit-text-stroke-width: 1px;
 };
 
 .getchunkling {
@@ -21,9 +23,15 @@ body {
 
 .btn {
   border-radius: 10px;
-  border-color: whitesmoke;
+  border-color: $accent-one;
   padding: 10px;
   font-size: 30px;
   background-color: $text;
   color: $background-color;
+  border-style: solid;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.95;
+    //border-style: inset;
+  }
 }

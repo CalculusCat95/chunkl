@@ -7,6 +7,8 @@ body {
   font-size: 500%;
   border-radius: 10px;
   color: #2B3250;
+  -webkit-text-stroke-color: #6dd47e;
+  -webkit-text-stroke-width: 1px;
 }
 
 .getchunkling {
@@ -17,10 +19,16 @@ body {
 
 .btn {
   border-radius: 10px;
-  border-color: whitesmoke;
+  border-color: #6dd47e;
   padding: 10px;
   font-size: 30px;
   background-color: #2B3250;
   color: #ffd55a;
+  border-style: solid;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.95;
 }
 /*# sourceMappingURL=start.css.map */
