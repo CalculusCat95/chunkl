@@ -1,24 +1,29 @@
+$background-color: #ffd55a;
+$accent-one: #6dd47e;
+$text: #2B3250;
+
 body {
-  background-color: floralwhite;
+  background-color: $background-color;
 };
 
 .chunkldiv {
   text-align: center;
   font-size: 500%;
-  background-color: yellowgreen;
   border-radius: 10px;
+  color: $text;
 };
 
 .getchunkling {
   text-align: center;
-  background-color: yellowgreen;
   border-radius: 10px;
   padding: 10px;
 };
 
 .btn {
-  border-radius: 5px;
+  border-radius: 10px;
+  border-color: whitesmoke;
   padding: 10px;
   font-size: 30px;
-  background-color: wheat;
+  background-color: $text;
+  color: $background-color;
 }
