@@ -4,9 +4,11 @@ from tkinter import filedialog
 from initialize_cef import *
 from cefpython3 import cefpython as cef
 
+projectfile = None
+
 ##Function to read files
 def fileRead():
-
+    global projectfile
     root = tk.Tk()
     root.withdraw()
 
@@ -19,7 +21,7 @@ def fileRead():
 
         f.close()
         
-        js = """function{{console.log({file});}};"""
+        projectfile = r
 
         cookie = cef.Cookie()
         cookie.Set({"name": "project", "value": r})
@@ -38,7 +40,10 @@ def fileWrite(path, content):
 
     f.close()
 
-## For debug purposes 
-def printToPython(str):
+def sendToJs ():
 
-    print(str)
+    window.ExecuteFunction("loadProject", projectfile) ## Send the page the project
+
+def updateProjectFile (file):
+    global projectfile
+    projectfile = file

@@ -6,7 +6,6 @@ html, css, and javascript for the GUI and renders it in a cefpython window.
 from cefpython3 import cefpython as cef
 import frontend.bindings as bindings
 from initialize_cef import *
-import time
 
 def generate (page):
     
@@ -29,10 +28,8 @@ def generate (page):
 
     return html ## Return result
 
-def page (page, project):
+def page (page):
 
     window.LoadUrl(cef.GetDataUrl(generate(page))) ## Generates the correct page and displays it
-    time.sleep(0.05)
-    window.ExecuteFunction("loadProject", project) ## Send the page the project
 
 bindings.bind(page=page) ## Bind Python functions to Javascript

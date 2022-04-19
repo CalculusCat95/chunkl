@@ -1,3 +1,29 @@
 .stuff {
     font-family: 'Times New Roman', Times, serif;
 };
+.column {
+  float: left;
+  height: 100
+  &#left {
+    width: 10%;
+    text-align: center;
+  }
+  &#middle {
+    width: 80%;
+  }
+  &#right {
+    width: 10%;
+    text-align: center;
+  }
+}
+.row { 
+  float: top;
+  &#top {
+    height: 70%;
+    text-align: center;
+  }
+  &#bottom {
+    height: 30%;
+    text-align: center;
+  }
+}

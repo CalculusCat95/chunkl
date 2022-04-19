@@ -1,3 +1,4 @@
 function loadProject(file) {
-    page("main_editor", project=file);
+    updateProjectFile(file);
+    page("main_editor");
 }
