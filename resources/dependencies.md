@@ -1,2 +1,3 @@
-cefpython3==66.1
+cefpython3==66.1 
+
 tkinter==[any modern version]
