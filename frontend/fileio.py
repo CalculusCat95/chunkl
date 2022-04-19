@@ -4,29 +4,26 @@ from tkinter import filedialog
 from initialize_cef import *
 from cefpython3 import cefpython as cef
 
-projectfile = None
+projectfile = None ## Creates projectfile variable to be sent to javascript pages
 
 ##Function to read files
 def fileRead():
-    global projectfile
+
+    global projectfile ## Brings in project file to be updated
+    ## Gets file path to open with tkinter
     root = tk.Tk()
     root.withdraw()
-
     path = filedialog.askopenfilename()
 
-    try:
+    try: ## Ensures that it doesn't do anything if they close the file dialog
+        ## Opens the file and reads it into a variable
         f = open(path, "r")
-
         r = f.read()
-
         f.close()
         
-        projectfile = r
+        projectfile = r ## Updates the projectfile variable to be sent to javascript
 
-        cookie = cef.Cookie()
-        cookie.Set({"name": "project", "value": r})
-
-        window.ExecuteFunction("loadProject", r)
+        window.ExecuteFunction("loadProject", projectfile)
 
     except:
         pass
