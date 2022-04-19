@@ -45,3 +45,98 @@ NameError: name 'browser' is not defined
     browser.ExcecuteJavascript(jsCode="alert("+r+");")
 NameError: name 'browser' is not defined
 
+
+[2022-04-14 17:19:07] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 8, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 7, in <module>
+    import frontend.bindings as bindings
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\bindings.py", line 4, in <module>
+    import frontend.fileio as fileio
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 2, in <module>
+    from curses import window
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3312.0_x64__qbz5n2kfra8p0\lib\curses\__init__.py", line 13, in <module>
+    from _curses import *
+ModuleNotFoundError: No module named '_curses'
+
+
+[2022-04-18 14:20:14] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 5, in <module>
+    page("start")
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 33, in page
+    window.LoadUrl(cef.GetDataUrl(generate(page))) ## Generates the correct page and displays it
+NameError: name 'window' is not defined
+
+
+[2022-04-18 14:21:56] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 2, in <module>
+    import initialize
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\initialize.py", line 11, in <module>
+    bindings.bind(browser=window) ## Bind Python functions to Javascript
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\bindings.py", line 13, in bind
+    bindings.SetFunction("page", page.page)
+NameError: name 'page' is not defined
+
+
+[2022-04-18 14:23:21] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 3, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 8, in <module>
+    from ..initialize import *
+ImportError: attempted relative import beyond top-level package
+
+
+[2022-04-18 14:24:07] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 3, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 8, in <module>
+    from .initialize import *
+ModuleNotFoundError: No module named 'gui.initialize'
+
+
+[2022-04-18 14:24:23] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 3, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 8, in <module>
+    from ..initialize import *
+ImportError: attempted relative import beyond top-level package
+
+
+[2022-04-18 14:25:02] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 3, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 37, in <module>
+    bindings.bind(browser=window, page=page()) ## Bind Python functions to Javascript
+TypeError: page() missing 1 required positional argument: 'page'
+
+
+[2022-04-18 14:25:40] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    window.ExcecuteJavascript(jsCode="alert("+r+");")
+NameError: name 'window' is not defined
+
+
+[2022-04-18 14:28:06] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    window.ExcecuteJavascript(jsCode="alert("+r+");")
+AttributeError: 'cefpython_py39.PyBrowser' object has no attribute 'ExcecuteJavascript'
+
+
+[2022-04-18 14:29:27] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 22, in fileRead
+    window.ExcecuteJavascript(jsCode=("alert("+r+");"))
+AttributeError: 'cefpython_py39.PyBrowser' object has no attribute 'ExcecuteJavascript'
+
+
+[2022-04-18 14:31:29] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 2, in <module>
+    from gui.page import * ## Start the gui rolling
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\gui\page.py", line 37, in <module>
+    bindings.bind(browser=window, page=page) ## Bind Python functions to Javascript
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\bindings.py", line 16, in bind
+    browser.SetJavascriptBindings(bindings) ## Passes bindings to cefpython
+AttributeError: 'NoneType' object has no attribute 'SetJavascriptBindings'
+

@@ -5,6 +5,7 @@ html, css, and javascript for the GUI and renders it in a cefpython window.
 """
 from cefpython3 import cefpython as cef
 import frontend.bindings as bindings
+from initialize_cef import *
 
 def generate (page):
     
@@ -31,7 +32,6 @@ def page (page):
 
     window.LoadUrl(cef.GetDataUrl(generate(page))) ## Generates the correct page and displays it
 
+##window = cef.CreateBrowserSync(url=cef.GetDataUrl(generate("start")), window_title="chunkl") ## Display start page
 
-window = cef.CreateBrowserSync(url=cef.GetDataUrl(generate("start")), window_title="chunkl") ## Display start page
-
-bindings.bind(browser=window) ## Bind Python functions to Javascript
+bindings.bind(page=page) ## Bind Python functions to Javascript

@@ -1,9 +1,9 @@
 from cefpython3 import cefpython as cef
 import backend.backend as backend
-import gui.page as page
 import frontend.fileio as fileio
+from initialize_cef import *
 
-def bind(browser):
+def bind(page):
     
     bindings = cef.JavascriptBindings(bindToFrames=True) ## Initializes cefpython JavascriptBindings class
 
@@ -11,7 +11,7 @@ def bind(browser):
     bindings.SetFunction("build", backend.build)
     bindings.SetFunction("fileRead", fileio.fileRead)
     bindings.SetFunction("fileWrite", fileio.fileWrite)
-    bindings.SetFunction("page", page.page)
+    bindings.SetFunction("page", page)
     bindings.SetFunction("print", fileio.printToPython)
 
-    browser.SetJavascriptBindings(bindings) ## Passes bindings to cefpython
+    window.SetJavascriptBindings(bindings) ## Passes bindings to cefpython
