@@ -1,0 +1,13 @@
+
+[2022-04-19 11:07:09] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 48, in cefpython_py39.V8FunctionHandler_Execute
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\frontend\fileio.py", line 17, in fileRead
+    f = open(path, "r")
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+
+[2022-04-19 11:25:54] Traceback (most recent call last):
+  File "c:\Users\Anonymous Cow\Documents\Coding\python_stuff\chunKL\main.py", line 4, in <module>
+    page("start")
+TypeError: page() missing 1 required positional argument: 'project'
+

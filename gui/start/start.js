@@ -1,6 +1,3 @@
-var project;
-
 function loadProject(file) {
-    sessionStorage.setItem(file);
-    page("main_editor");
+    page("main_editor", project=file);
 }

@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from initialize_cef import *
+from cefpython3 import cefpython as cef
 
 ##Function to read files
 def fileRead():
@@ -11,19 +12,22 @@ def fileRead():
 
     path = filedialog.askopenfilename()
 
-    print(path)
+    try:
+        f = open(path, "r")
 
-    f = open(path, "r")
+        r = f.read()
 
-    r = f.read()
+        f.close()
+        
+        js = """function{{console.log({file});}};"""
 
-    f.close()
+        cookie = cef.Cookie()
+        cookie.Set({"name": "project", "value": r})
 
-    print(r)
-    
-    js = """function{{console.log({file});}};"""
+        window.ExecuteFunction("loadProject", r)
 
-    window.ExecuteFunction("loadProject", r)
+    except:
+        pass
 
 ##Function to write values to files
 def fileWrite(path, content):
