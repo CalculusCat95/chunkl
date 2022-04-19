@@ -21,7 +21,9 @@ def fileRead():
 
     print(r)
     
-    window.ExecuteJavascript(jsCode=("setInterval(alert("+str(r)+"), 10000);"))
+    js = """function{{console.log({file});}};"""
+
+    window.ExecuteFunction("loadProject", r)
 
 ##Function to write values to files
 def fileWrite(path, content):
