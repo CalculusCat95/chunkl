@@ -1,1 +1,3 @@
-https://stackoverflow.com/questions/11609376/share-data-between-html-pages - pass data between pages + save it
+https://github.com/libgdx/packr
+
+Possibility for packaging Java app files. 
