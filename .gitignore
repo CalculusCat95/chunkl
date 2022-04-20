@@ -3,3 +3,4 @@ webrtc_events_logs/
 debug.log
 __pycache__/
 *.pyc
+error.log
