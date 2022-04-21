@@ -30,17 +30,15 @@ def fileRead():
 
 ##Function to write values to files
 def fileWrite(path, content):
-
+    ## Open the file and write the content to it
     f = open(path, "w")
-
     f.write(str(content))
-
     f.close()
 
-def sendToJs ():
+def sendToJs (): ## Can be called from javascript to send the project to the gui
 
     window.ExecuteFunction("loadProject", projectfile) ## Send the page the project
 
-def updateProjectFile (file):
+def updateProjectFile (file): ## Updates the version of the file stored in python
     global projectfile
     projectfile = file
