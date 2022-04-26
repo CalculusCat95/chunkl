@@ -1,6 +1,9 @@
 .stuff {
     font-family: 'Times New Roman', Times, serif;
 };
+.body {
+  height: 100%;
+}
 .column {
   float: left;
   height: 100%;
@@ -21,9 +24,11 @@
   &#top {
     height: 70%;
     text-align: center;
+    //padding-bottom: 70%;
   }
   &#bottom {
     height: 30%;
     text-align: center;
+    //padding-bottom: 30%;
   }
 }
