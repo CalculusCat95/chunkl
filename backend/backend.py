@@ -6,6 +6,9 @@ and begins the appropriate build toolchain."
 """
 
 ## Placeholder function; will be implemented soon.
-def build(platform, path):
+def build(platform, file):
     
-    print("Build Initiated! \n Platform: ", platform, "\n Path: ", path)
+    print("Build Initiated! \n Platform: ", platform, "\n Path: ", file)
+
+def preview(file):
+    print(file)

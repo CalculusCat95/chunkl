@@ -14,5 +14,7 @@ def bind(page):
     bindings.SetFunction("sendToJs", sendToJs)
     bindings.SetFunction("updateProjectFile", updateProjectFile)
     bindings.SetFunction("page", page)
+    bindings.SetFunction("preview", backend.preview)
+    bindings.SetFunction("getSavePath", getSavePath)
 
     window.SetJavascriptBindings(bindings) ## Passes bindings to cefpython
